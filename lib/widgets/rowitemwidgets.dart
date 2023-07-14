@@ -31,7 +31,7 @@ class RowItemWidget extends StatelessWidget {
                     children: [
                       Image.asset(
                         "images/$i.png",
-                        height: 150,
+                        height: 155,
                         width: 100,
                         fit: BoxFit.contain,
                       ),

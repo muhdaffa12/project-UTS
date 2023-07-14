@@ -100,7 +100,7 @@ class ItemPage extends StatelessWidget {
                         Text(
                           "Rp.150000",
                           style: TextStyle(
-                            fontSize: 28,
+                            fontSize: 20,
                             fontWeight: FontWeight.w500,
                             color: Colors.redAccent,
                           ),

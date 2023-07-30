@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/ItemBottomNavbar.dart';
+import 'package:project_shop/widgets/ItemBottomNavbar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
@@ -127,35 +126,36 @@ class ItemPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 10),
-                        Row(
-                          children: [
-                            for (int i = 5; i < 10; i++)
-                              Container(
-                                height: 35,
-                                width: 35,
-                                alignment: Alignment.center,
-                                margin: EdgeInsets.symmetric(horizontal: 5),
-                                decoration: BoxDecoration(
-                                  color: Color(0xFFF5F9FD),
-                                  borderRadius: BorderRadius.circular(10),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color(0xFF475269).withOpacity(0.3),
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                    ),
-                                  ],
-                                ),
-                                child: Text(
-                                  i.toString(),
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                          ],
-                        ),
+
+                        // Row(
+                        //   children: [
+                        //     for (int i = 5; i < 10; i++)
+                        //       Container(
+                        //         height: 35,
+                        //         width: 35,
+                        //         alignment: Alignment.center,
+                        //         margin: EdgeInsets.symmetric(horizontal: 5),
+                        //         decoration: BoxDecoration(
+                        //           color: Color(0xFFF5F9FD),
+                        //           borderRadius: BorderRadius.circular(10),
+                        //           boxShadow: [
+                        //             BoxShadow(
+                        //               color: Color(0xFF475269).withOpacity(0.3),
+                        //               blurRadius: 5,
+                        //               spreadRadius: 1,
+                        //             ),
+                        //           ],
+                        //         ),
+                        //         child: Text(
+                        //           i.toString(),
+                        //           style: TextStyle(
+                        //             fontSize: 18,
+                        //             fontWeight: FontWeight.w500,
+                        //           ),
+                        //         ),
+                        //       ),
+                        //   ],
+                        // ),
                       ],
                     ),
                   ],

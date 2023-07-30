@@ -18,17 +18,7 @@ class HomeBottomNavbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Icon(
-            Icons.category_outlined,
-            color: Colors.white,
-            size: 32,
-          ),
-          Icon(
             CupertinoIcons.cart_fill,
-            color: Colors.white,
-            size: 32,
-          ),
-          Icon(
-            Icons.favorite_border,
             color: Colors.white,
             size: 32,
           ),

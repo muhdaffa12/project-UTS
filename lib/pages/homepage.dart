@@ -1,8 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_shop/widgets/AllItemswidget.dart';
 import 'package:project_shop/widgets/rowitemwidgets.dart';
-
-import '../widgets/HomeBottomNavbar.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -15,6 +14,7 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(15),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       padding: EdgeInsets.all(8),
@@ -30,7 +30,26 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       child: Icon(
-                        Icons.sort,
+                        CupertinoIcons.cart_fill,
+                        size: 30,
+                        color: Color(0xFF475269),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFF5F9FD),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xFF475269).withOpacity(0.3),
+                            blurRadius: 5,
+                            spreadRadius: 1,
+                          ),
+                        ],
+                      ),
+                      child: Icon(
+                        Icons.logout,
                         size: 30,
                         color: Color(0xFF475269),
                       ),
@@ -80,7 +99,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: HomeBottomNavbar(),
     );
   }
 }

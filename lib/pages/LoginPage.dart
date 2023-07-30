@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_shop/pages/homepage.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -75,6 +76,7 @@ class LoginPage extends StatelessWidget {
                       // margin: EdgeInsets.,
                       width: 250,
                       child: TextFormField(
+                        obscureText: true,
                         decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Kata Sandi"),
                       ),
@@ -82,27 +84,18 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
+              TextButton(onPressed: () {}, child: Text("Daftar Akun")),
               SizedBox(height: 10),
-              Container(
-                margin: EdgeInsets.only(left: 15),
-                alignment: Alignment.centerLeft,
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Lupa Kata Sandi",
-                    style: TextStyle(
-                        color: Color(0xFF475269),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500),
-                  ),
-                ),
-              ),
               SizedBox(
                 height: 40,
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "HomePage");
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return HomePage();
+                    },
+                  ));
                 },
                 child: Container(
                   alignment: Alignment.center,
@@ -133,29 +126,6 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 50),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Tidak Punya Akun-",
-                    style: TextStyle(
-                      color: Color(0xFF475269).withOpacity(0.8),
-                      fontSize: 16,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Buat Akun",
-                      style: TextStyle(
-                        color: Color(0xFF475269),
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),

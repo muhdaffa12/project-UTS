@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_shop/pages/ItemPage.dart';
 
 class AllItemsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      childAspectRatio: 0.68,
+      // childAspectRatio: 0.68,
+      childAspectRatio: 1 / 1.5,
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: [
@@ -16,6 +18,7 @@ class AllItemsWidget extends StatelessWidget {
             margin: EdgeInsets.all(9),
             decoration: BoxDecoration(
               color: Color(0xFFF5F9FD),
+              // color: Colors.black,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
@@ -29,7 +32,11 @@ class AllItemsWidget extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "ItemPage");
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ItemPage();
+                      },
+                    ));
                   },
                   child: Padding(
                     padding: EdgeInsets.all(10),
